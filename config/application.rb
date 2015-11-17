@@ -20,6 +20,9 @@ module ExampleApp
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # In lieu of Rails' secrets.yml file, use ENV for all environments
+    secrets.secret_key_base = Settings.rails.secret_key_base
+
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
   end
