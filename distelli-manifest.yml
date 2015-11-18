@@ -4,7 +4,7 @@ jcarlson/ExampleApp:
   PkgInclude:
     - '*'
 
-  PreBuild:
+  PreInstall:
     - sudo apt-get -y update
     - sudo apt-get -y install git sqlite3
     - if [ -a ~/.rvm/scripts/rvm ]; then
@@ -18,9 +18,9 @@ jcarlson/ExampleApp:
     - rvm install ruby-2.2.3
     - rvm use 2.2.3
     - gem install bundler
+    - bundle install
 
-  Build:
+  Exec:
     - source ~/.rvm/scripts/rvm
     - rvm use 2.2.3
-    - bundle install
-    - bundle exec rake
+    - bundle exec rails server
