@@ -3,3 +3,7 @@ database:
 
 rails:
   secret_key_base: "<%= ENV['SECRET_KEY_BASE'] %>"
+
+sidekiq:
+  redis:
+    url: "<%= ENV['REDIS_URL] %>"

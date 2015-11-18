@@ -25,6 +25,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Rails config gem to configure application
 gem 'config', '~> 1.0.0'
+
+# Use Sidekiq for background jobs
+gem 'sidekiq', '~> 4.0.0'
+gem 'sinatra', '~> 1.4.6'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

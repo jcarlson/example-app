@@ -3,3 +3,7 @@ database:
 
 rails:
   secret_key_base: 864be0e77f18991fecc5388032b14b0bb4be4e084295c15b1b3be268d084565474d8b369c650eb3998556ee8564db624b7aa7168dcff2500fbee5e1622fd8769
+
+sidekiq:
+  redis:
+    url: 'redis://localhost:6379/1'
