@@ -1,5 +1,5 @@
 database:
-  url: sqlite3:db/test.sqlite3
+  url: postgresql://localhost:5432/example-app-test
 
 rails:
   secret_key_base: 864be0e77f18991fecc5388032b14b0bb4be4e084295c15b1b3be268d084565474d8b369c650eb3998556ee8564db624b7aa7168dcff2500fbee5e1622fd8769

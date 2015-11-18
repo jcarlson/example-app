@@ -1,5 +1,5 @@
 database:
-  url: sqlite3:db/development.sqlite3
+  url: postgresql://localhost:5432/example-app-dev
 
 rails:
   secret_key_base: d7a9e33f42f763d27fce296d1f34fca2a851cc0e4eeecaf1d8bd3b7c59d9ed611cb8d719ec410a268f46c27ac64fb04fcac2cb314bb3b83d8bf62fa8a332f96b
