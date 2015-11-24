@@ -1,6 +1,6 @@
 jcarlson/ExampleApp:
   Env:
-    RAILS_ENV: production
+    - RAILS_ENV: production
 
   #Learn about the distelli-manifest.yml at https://www.distelli.com/docs/reference/distelli-manifest
   PkgInclude:
