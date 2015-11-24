@@ -1,6 +1,7 @@
 jcarlson/ExampleApp:
   Env:
     - RAILS_ENV: production
+    - SECRET_KEY_BASE: evAn7WuZRlY2kjCE4whfHi9y1oTGDJLF
 
   #Learn about the distelli-manifest.yml at https://www.distelli.com/docs/reference/distelli-manifest
   PkgInclude:
@@ -13,15 +14,15 @@ jcarlson/ExampleApp:
     - curl -sSL https://get.rvm.io | bash -s stable --ruby
     - source ~/.rvm/scripts/rvm
     - rvm install ruby-2.2.3
-    - rvm use 2.2.3@example-app
+    - rvm use 2.2.3
     - gem install bundler
 
   PostInstall:
     - source ~/.rvm/scripts/rvm
-    - rvm use 2.2.3@example-app
-    - bundle install -j4 --without development test --deployment --binstubs vendor/bundle/bin
+    - rvm use 2.2.3
+    - bundle install --without development test --deployment
 
   Exec:
     - source ~/.rvm/scripts/rvm
-    - rvm use 2.2.3@example-app
-    - exec bundle exec rails server -e production
+    - rvm use 2.2.3
+    - bundle exec rails server -b 0.0.0.0 -p 8080
