@@ -1,4 +1,6 @@
 jcarlson/ExampleApp:
+  Env:
+    RAILS_ENV: production
 
   #Learn about the distelli-manifest.yml at https://www.distelli.com/docs/reference/distelli-manifest
   PkgInclude:
@@ -17,9 +19,9 @@ jcarlson/ExampleApp:
   PostInstall:
     - source ~/.rvm/scripts/rvm
     - rvm use 2.2.3@example-app
-    - bundle install --without development test --deployment -j4
+    - bundle install -j4 --without development test --deployment --binstubs vendor/bundle/bin
 
   Exec:
     - source ~/.rvm/scripts/rvm
     - rvm use 2.2.3@example-app
-    - bundle exec rails server
+    - exec bundle exec rails server -e production
