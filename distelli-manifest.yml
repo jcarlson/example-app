@@ -5,6 +5,7 @@ jcarlson/ExampleApp:
     - '*'
 
   PreInstall:
+    - sudo apt-add-repository -y ppa:brightbox/ruby-ng
     - sudo apt-get -y update
     - sudo apt-get -y install git ruby2.2
     - gem install bundler
