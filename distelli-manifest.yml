@@ -25,5 +25,4 @@ jcarlson/ExampleApp:
   Exec:
     - source ~/.rvm/scripts/rvm
     - rvm use 2.2.3
-    - echo `which bundle`
     - bundle exec rails server -b 0.0.0.0 -p 8080
